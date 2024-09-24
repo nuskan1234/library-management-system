@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bdc13c1d-b343-4bd4-932b-6bad4089f10e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select*from issue where book_id =$P{id}]]>
+	</queryString>
+	<field name="book_id" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="b_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="publisher" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="stu_id" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="s_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="f_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="course" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="branch" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="doi" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="181" y="14" width="204" height="37" uuid="90513bae-9ab1-4327-ac15-13a2fd55ff79"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Books To Return]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="2" width="100" height="20" uuid="574f91bf-f1b9-4251-8287-0c26df5b9970"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Book ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="2" width="100" height="20" uuid="8dd9c424-bcfc-4bd0-b2c4-9f859d1bc5f5"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Book Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="2" width="100" height="20" uuid="6cc476db-f090-4ce9-b7a4-8a42e2fef151"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="367" y="2" width="100" height="20" uuid="f82bba24-f493-4dae-8a7e-e18c481142b3"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="487" y="2" width="100" height="20" uuid="46c8d181-3833-41fb-b2e7-503a31c5bea6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date Issue]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="8" width="100" height="20" uuid="8cb6eb69-045d-47ea-9f77-2e13e898808d"/>
+				<textFieldExpression><![CDATA[$F{book_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="8" width="100" height="20" uuid="441b8f46-25d3-4257-90c2-aeb3fca93f90"/>
+				<textFieldExpression><![CDATA[$F{b_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="252" y="7" width="100" height="20" uuid="b88724c8-52e7-4184-b902-76dcdd414dba"/>
+				<textFieldExpression><![CDATA[$F{stu_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="367" y="8" width="100" height="20" uuid="06f6e11d-d2b7-467f-8a0e-7132639a8ff8"/>
+				<textFieldExpression><![CDATA[$F{s_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="487" y="8" width="100" height="20" uuid="e843d46d-6f32-4dee-91cd-40830bd54223"/>
+				<textFieldExpression><![CDATA[$F{doi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="2" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
